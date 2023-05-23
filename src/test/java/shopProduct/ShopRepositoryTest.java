@@ -1,10 +1,8 @@
+package shopProduct;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.netology.javaqa.AlreadyExistsException;
-import ru.netology.javaqa.NotFoundException;
-import ru.netology.javaqa.Product;
-import ru.netology.javaqa.ShopRepository;
 
 public class ShopRepositoryTest {
     private ShopRepository shopRepository;
@@ -57,6 +55,8 @@ public class ShopRepositoryTest {
         Product duplicateProduct = new Product(1, "Носки c ID", 200);
         Assertions.assertThrows(AlreadyExistsException.class, () -> shopRepository.add(duplicateProduct));
     }
+
+
 }
 
 
